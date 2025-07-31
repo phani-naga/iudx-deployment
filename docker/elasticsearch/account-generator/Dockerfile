@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.14.0rc1-slim
 WORKDIR /usr/share/app
 RUN pip3 install --no-cache-dir requests
 COPY src  src
