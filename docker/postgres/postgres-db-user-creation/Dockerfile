@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.14.0rc2-slim
 WORKDIR /usr/share/app
 RUN pip3 install --no-cache-dir psycopg2-binary
 COPY src  src
