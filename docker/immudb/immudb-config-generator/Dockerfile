@@ -1,4 +1,4 @@
-FROM python:3.8-slim
+FROM python:3.14.0-slim
 WORKDIR /usr/share/app
 RUN /usr/local/bin/python -m pip install --upgrade pip && pip3 install --no-cache-dir immudb-py==1.4.0
 COPY src  src
