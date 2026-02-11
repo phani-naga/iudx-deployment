@@ -1,4 +1,4 @@
-FROM python:3.9.12-alpine AS builder
+FROM python:3.14.3-alpine AS builder
 RUN apk update && \
     apk add musl-dev libpq-dev gcc
 RUN python -m venv /opt/venv
@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 
-FROM python:3.9.12-alpine
+FROM python:3.14.3-alpine
 RUN apk update && \
     apk add libpq-dev 
 COPY --from=builder /opt/venv /opt/venv
